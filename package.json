@@ -12,17 +12,19 @@
     "sitemap",
     "es2015"
   ],
-  "main": "index.js",
+  "main": "index.es5.js",
   "jsnext:main ": "index.js",
   "scripts": {
     "lint": "eslint --ext .js,.jsx ./config ./example ./lib ./test",
     "test": "karma start ./config/karma.config.js",
+    "build": "npm run lint && webpack --config ./config/build.config.js",
     "example": "cd example && node ./sitemap-builder.js"
   },
   "author": "Igor Uvarov <kuflash@ya.ru> (http://kuflash.ru)",
   "license": "MIT",
   "files": [
     "index.js",
+    "index.es5.js",
     "lib"
   ],
   "devDependencies": {
