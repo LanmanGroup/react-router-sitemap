@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
@@ -21,9 +21,9 @@ module.exports = {
 			exclude: /node_modules/,
 		}],
 	},
-	plugins: [
-		new webpack.optimize.UglifyJsPlugin(),
-	],
+	// plugins: [
+	// 	new webpack.optimize.UglifyJsPlugin(),
+	// ],
 	target: 'node',
 	externals: [nodeExternals()],
 };
